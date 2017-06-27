@@ -13,18 +13,97 @@ const user = {
 const batches = [
   {
     number: 1,
-    startDate: 15-01-2017,
-    endDate: 14-03-2017
+    startDate: 2017-01-15,
+    endDate: 2017-02-14,
+    students: [
+      {
+        name: "Ann",
+        picture: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png",
+        day: [
+          {
+            date: 2017-01-15,
+            red: false,
+            yellow: false,
+            green: true,
+            remarks: "Good"
+          },
+          {
+            date: 2017-01-16,
+            red: false,
+            yellow: false,
+            green: true,
+            remarks: "Still good"
+          }
+        ]
+      },
+      {
+        name: "Magdalen",
+        picture: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png",
+        day: [
+          {
+            date: 2017-01-15,
+            red: false,
+            yellow: true,
+            green: false,
+            remarks: "Good be better"
+          },
+          {
+            date: 2017-01-16,
+            red: false,
+            yellow: true,
+            green: false,
+            remarks: "Improved, but needs to catch up"
+          }
+        ]
+      }
+    ]
   },
   {
     number: 2,
-    startDate: 15-03-2017,
-    endDate: 14-05-2017
-  },
-  {
-    number: 3,
-    startDate: 15-05-2017,
-    endDate: 14-07-2017
+    startDate: 2017-02-15,
+    endDate: 2017-03-14,
+    students: [
+      {
+        name: "Hanna",
+        picture: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png",
+        day: [
+          {
+            date: 2017-02-15,
+            red: false,
+            yellow: false,
+            green: true,
+            remarks: "Good"
+          },
+          {
+            date: 2017-02-16,
+            red: true,
+            yellow: false,
+            green: false,
+            remarks: "Had a bad day"
+          }
+        ]
+      },
+      {
+        name: "Sophia",
+        picture: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png",
+        day: [
+          {
+            date: 2017-02-15,
+            red: false,
+            yellow: false,
+            green: true,
+            remarks: "Excellent student"
+          },
+          {
+            date: 2017-02-16,
+            red: false,
+            yellow: false,
+            green: true,
+            remarks: "Top student"
+          }
+        ]
+      }
+    ]
   }
 ]
 

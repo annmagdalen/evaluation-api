@@ -6,11 +6,13 @@ const restrict = [
   restrictToAuthenticated()
 ];
 
+const joinBatch = require('../../hooks/join-batch');
+
+const saveStudent = require('../../hooks/save-student');
+
 module.exports = {
   before: {
-    all: [
-      ...restrict
-    ],
+    all: [...restrict, joinBatch(), saveStudent()],
     find: [],
     get: [],
     create: [],
