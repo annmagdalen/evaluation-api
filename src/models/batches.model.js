@@ -21,7 +21,7 @@ module.exports = function (app) {
 
   const batches = new mongooseClient.Schema({
     students: [studentSchema],
-    number: { type: Number, required: true },
+    number: { type: Number, unique: true, required: true },
     startDate: { type: Date, required: true},
     endDate: { type: Date, required: true },
     createdAt: { type: Date, default: Date.now },

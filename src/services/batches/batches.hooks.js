@@ -8,16 +8,14 @@ const restrict = [
 
 const joinBatch = require('../../hooks/join-batch');
 
-const saveStudent = require('../../hooks/save-student');
-
 module.exports = {
   before: {
-    all: [...restrict, joinBatch(), saveStudent()],
+    all: [...restrict],
     find: [],
     get: [],
     create: [],
-    update: [],
-    patch: [],
+    update: [joinBatch()],
+    patch: [joinBatch()],
     remove: []
   },
 
