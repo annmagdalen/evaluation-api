@@ -11,11 +11,18 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
     return hook.app.service('batches').get(hook.data.batch)
       .then((batch) => {
         const { students } = batch
-        let j = students.indexOf(hook.data.student)
-        const { day } = students[j]
+
+        const student = students.map((student) => {
+          if (student._id.toString() === hook.data.student.toString()) {
+            student.day = student.day.concat(hook.data.day)
+          }
+          return student
+        })
+
+        batch.students = student
 
         hook.data = {
-          day: day.concat(hook.day)
+          students: batch.students
         }
 
         return Promise.resolve(hook);
